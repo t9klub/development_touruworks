@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 export default {
   content: [
     "./resources/**/*.blade.php",
@@ -6,12 +9,14 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    colors:{
-      'gray' : '#171618',
-      'card' : '#202127',
-      'subtext': '#BCBDBE'
+ 
+    extend: {
+      colors:{
+        'gray' : '#171618',
+        'card' : '#202127',
+        'subtext': '#BCBDBE'
+      },
     },
-    extend: {},
   },
   plugins: [],
 }

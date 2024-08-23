@@ -16,9 +16,7 @@
                 background-color: #171618;
             }
         </style> 
-
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <script src="https://cdn.tailwindcss.com"></script>
+            @vite('resources/css/app.css')
     </head>
     <body class="antialiased"> 
         <div class="h-screen flex items-center justify-center mx-4">
