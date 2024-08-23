@@ -16,7 +16,20 @@
                 background-color: #171618;
             }
         </style> 
- <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gray' : '#171618',
+                        'card' : '#202127',
+                        'subtext': '#BCBDBE'
+                    }
+                }
+            }
+            }
+        </script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased"> 
