@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title> Home / Development Site / Touru Works 2024</title>
+        <title> Home / Development Site / Touru Works</title>
         <link rel="icon" href="{{asset('/src/svg/work_mouth_white.svg')}}" type="image/icon" >
 
         <!-- Fonts -->
