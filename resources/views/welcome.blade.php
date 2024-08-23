@@ -16,7 +16,8 @@
                 background-color: #171618;
             }
         </style> 
-            @vite('resources/css/app.css')
+
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased"> 
         <div class="h-screen flex items-center justify-center mx-4">
