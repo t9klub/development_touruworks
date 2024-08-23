@@ -4,9 +4,9 @@ const colors = require('tailwindcss/colors')
 
 export default {
   content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
+    "./Resources/**/*.blade.php",
+    "./Resources/**/*.js",
+    "./Resources/**/*.vue",
   ],
   theme: {
  
