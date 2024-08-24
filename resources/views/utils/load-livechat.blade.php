@@ -48,8 +48,8 @@
 <body>
     <div class="container">
         <div class="content-failure" id="content-failure">
-            <h1>Stream not start yet!😴</h1>
-            <p style="text-align: center">Please make sure channel <u>{{$chName}}</u> already create streaming waiting room or already start streaming, <b><i>please try it again later</i></b></b></p>
+            <h1>Stream not found!😴</h1>
+            <p style="text-align: center">Please make sure channel <u><b>{{$chName}}</b></u> is correct name, already have waiting room or start streaming, <i style="font-weight: 200">please try it again</i></p>
             <p style="color:red" id="refresh-text">refresh in <span id="timer"> 10</span> seconds</p>
         </div>
     </div>
