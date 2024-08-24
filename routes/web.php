@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('utils.load-livechat');
 // }); 
 Route::get('/load/{url}',[LoadLivechatController::class,'index']); 
+Route::get('/dummy', function(){
+    return view('utils.dummy-chat');
+}); 
 
 
 Route::get('/', function () {
