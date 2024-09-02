@@ -1,7 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>{{ $title ?? 'Touru Works 2023' }}</title>
 <meta name="description" content="Touruworks.id - This site for my comission livechat youtube and twitch aka chatbox (future) contact me if u interest on twitter/x or discord.">
 <meta name="keywords" content="comission, vtuber indonesia, livechat, chatbox, comission">
 <meta http-equiv="Permissions-Policy" content="ch-ua-form-factor">
