@@ -19,6 +19,11 @@
                 }
             body{
                 background-color: #171618;
+                /* background-color: #e5e5f7; */
+                opacity: 0.8;
+                background-image:  radial-gradient(#4c4c4c 0.5px, transparent 0.5px), radial-gradient(#ffbb003e 0.5px, #171618 0.5px);
+                background-size: 20px 20px;
+                background-position: 0 0,10px 10px;
                 /* overflow: hidden; */
             }
         </style> 
@@ -46,7 +51,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased"> 
-        <div class="h-screen flex items-center justify-center mx-4 mb-4">
+        <div class="h-screen flex items-center justify-center mx-4 ">
             <div class="w-full md:w-10/12 lg:w-3/4 xl:w-1/3  animation-all duration-1000 scale-95" >
                 <div class="w-full overflow-hidden text-neutral-600 dark:divide-neutral-100 dark:bg-neutral-900/50 dark:text-neutral-300 px-4 py-2">
                     <div class="flex flex-col">
@@ -232,7 +237,7 @@
                         </div>
                     </div>
                 </div>
-                <footer class="flex flex-row justify-between px-4 text-sm">
+                <footer class="flex flex-row justify-between px-4 pb-4 text-sm">
                     <p class="text-subtext">Develop by Touru ©2024</p>
                     <a href="#" class="text-subtext">change language: <span class="underline">english</span></a>
                 </footer>
