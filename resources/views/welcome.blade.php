@@ -61,7 +61,7 @@
                             <div class="absolute inset-0 flex items-center flex-col justify-center z-10">
                                 <small>Development</small>
                                 <h1 class="font-bold text-xl text-white -mt-2 ">Touru Works</h1>
-                                <small>Give me a powa here <a href="https://ko-fi.com/touru9klub" class="underline">Ko-fi</a> or <a href="https://trakteer.id/touruworks" class="underline">Trakteer</a></small>
+                                <small>Give me a powa here <a href="https://ko-fi.com/touru9klub" class="underline hover:text-yellow-400 transition-all duration-600">Ko-fi</a> or <a href="https://trakteer.id/touruworks" class="underline hover:text-yellow-400 transition-all duration-600">Trakteer</a></small>
                             </div>
                         </div>
                       
@@ -78,7 +78,7 @@
                         <div x-cloak x-show="isExpanded" id="accordionItemOne" role="region" aria-labelledby="controlsAccordionItemOne" x-collapse x-transition>
                             <div class="p-4 text-sm sm:text-base text-pretty">
                                 Website ini dirancang untuk membantu pengembangan ultilitas untuk keperluan komisi yang kita jalanin, beserta menjadi dokumentasi catatan pengembangan. <br><br>
-                                Semua yang kita kembangkan 100% gratis tanpa iklan untuk kalian. jika kalian ada pertanyaan bisa ditanyakan di x  <a href="https://x.com/touru9klub" class="underline underline-offset-2 text-black dark:text-white hover:text-yellow-400 transition-all duration-300">@touru9klub</a> atau pada discord  <a href="https://discord.com/users/1009807052882841701" class="underline underline-offset-2 text-black dark:text-white hover:text-yellow-400 transition-all duration-300">tourubaskara</a>.
+                                Semua yang kita kembangkan 100% gratis tanpa iklan untuk kalian. jika kalian ada pertanyaan bisa ditanyakan di x  <a href="https://x.com/touru9klub" class="underline  text-black dark:text-white hover:text-yellow-400 transition-all duration-300">@touru9klub</a> atau pada discord  <a href="https://discord.com/users/1009807052882841701" class="underline  text-black dark:text-white hover:text-yellow-400 transition-all duration-300">tourubaskara</a>.
                             </div>
                         </div>
                     </div>
