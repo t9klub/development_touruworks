@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
 const colors = require('tailwindcss/colors')
-
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+ 
+export default withMT({
   content: [
     "./Resources/**/*.blade.php",
     "./Resources/**/*.js",
@@ -19,5 +20,5 @@ export default {
     },
   },
   plugins: [],
-}
+});
 
