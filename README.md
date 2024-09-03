@@ -118,10 +118,13 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Generate Key Arisan [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/t9klub/development_touruworks.git
+   ``` 
+2. Check your composer and install
+   ```sh
+   composer install
    ```
 3. Install NPM packages
    ```sh
@@ -130,8 +133,14 @@ _Below is an example of how you can instruct your audience on installing and set
 4. Generate Key Artisan
    ```sh
     php artisan key:generate
+    php artisan migrate
    ```
-5. Change git remote url to avoid accidental pushes to base project
+5. Run Project
+    ```sh
+     php artisan serve 
+     npm run dev
+    ```
+6. Change git remote url to avoid accidental pushes to base project
    ```sh
    git remote set-url origin github_username/development_touruworks
    git remote -v # confirm the changes
@@ -139,15 +148,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -162,16 +162,25 @@ Project Link: [https://github.com/t9klub/development_touruworks](https://github.
 
 
 
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/t9klub/development_touruworks.svg?style=for-the-badge
 [contributors-url]: https://github.com/t9klub/development_touruworks/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/t9klub/development_touruworks.svg?style=for-the-badge
 [forks-url]: https://github.com/t9klub/development_touruworks/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/t9klub/development_touruworks.svg?style=for-the-badge
 [stars-url]: https://github.com/t9klub/development_touruworks/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/t9klub/development_touruworks.svg?style=for-the-badge
 [issues-url]: https://github.com/t9klub/development_touruworks/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/t9klub/development_touruworks/blob/master/LICENSE.txt
