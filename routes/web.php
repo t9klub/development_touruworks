@@ -22,7 +22,11 @@ Route::get('/dummy', function(){
     return view('utils.dummy-chat');
 })->name('utils.dummy'); 
 
-
+Route::get('lang/{lang}', function($lang){
+    app()->setLocale($lang);
+    session()->put('locale',$lang);
+    return redirect()->route('home');
+});
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
