@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         @include('partials._metas') 
 
-        <title> @lang('home.title-site') / Touru Works 2024 Dev.</title>
+        <title> @lang('home.title-site') / Touru Works 2025 Dev.</title>
         <link rel="icon" href="{{asset('/src/svg/work_mouth_white.svg')}}" type="image/icon" >
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <!-- Fonts -->
