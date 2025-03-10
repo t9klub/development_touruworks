@@ -26,6 +26,6 @@ return [
     'subtext-3-3' => 'Setelah kalian menekan <b>Generate</b> maka copy hasil url dibawah ke halaman browser obs kalian',
     'subtext-3-3-1' => '*cara ini tidak berfungsi untuk streaming unlisted dan membership', 
     'subtext-3-3-2' => 'Metode asli dari @Erolsultan atau anda dapat mengunjunginya di sini <a href="https://www.ytlc.my.id/" target="_blank" class="underline">https://www.ytlc.my.id/</a>', 
-    'footer-1' => 'Dikembangkan oleh Touru ©2024',
+    'footer-1' => 'Dikembangkan oleh Touru ©2025',
     'footer-2' => '<a href="/lang/en" class="text-subtext hover:text-primary">change language: <span class="underline">english</span></a>',
 ];

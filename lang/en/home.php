@@ -23,6 +23,6 @@ return [
     'subtext-3-3' => 'After you press <b> Generate</b>, copy the URL below to your OBS browser page.',
     'subtext-3-3-1' => '*this method does not work for unlisted and membership streams', 
     'subtext-3-3-2' => 'Original method from @Erolsultan or you can visit original version here <a href="https://www.ytlc.my.id/" target="_blank" class="underline">https://www.ytlc.my.id/</a>',
-    'footer-1' => 'Develop by Touru ©2024',
+    'footer-1' => 'Develop by Touru ©2025',
     'footer-2' => '<a href="/lang/id" class="text-subtext hover:text-primary">ganti bahasa: <span class="underline">indonesia</span></a>',
 ];
