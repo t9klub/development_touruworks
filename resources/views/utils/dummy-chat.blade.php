@@ -430,7 +430,7 @@
       btnstarts.style.display = 'none';
       btnpause.style.display = 'block';
       
-    //   setInterval(renderReaction, 3000);
+      setInterval(renderReaction, 3000);
       if (a == 0) {
         a = a + 1;
         // console.log(i);
@@ -443,22 +443,22 @@
             i = 0;
           }else{
             if(i%6 == 0){
-            //renderSuppa(); 
+            renderSuppa(); 
             // console.log('superchat appear');
             renderReaction(); 
           }
           else if(i%7 == 0){
-            //renderMember();  
+            renderMember();  
             // console.log('member appear');
           }
           else if(i%9 == 0 ){
-            //renderGift();
+            renderGift();
             // console.log('gift appear');
           }
           else if(i%10 ==0){    
           }
           else if(i%13 == 0 ){
-            // renderSticker();  
+             renderSticker();  
           }else{ 
             renderChat();
           } 
