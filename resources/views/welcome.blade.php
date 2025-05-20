@@ -94,10 +94,7 @@
                         </button>
                         <div x-cloak x-show="isExpanded" id="accordionItemTwo" role="region" aria-labelledby="controlsAccordionItemTwo" x-collapse x-transition>
                             <div class="p-4 text-sm sm:text-base text-pretty">
-                                @lang('home.content-4')
-                                <p class="text-subtext font-light text-xs text-right mt-4">
-                                    Update Chat: 20 Mei 2025
-                                </p>
+                                @lang('home.content-4') 
                             </div>
                         </div>
                     </div>
