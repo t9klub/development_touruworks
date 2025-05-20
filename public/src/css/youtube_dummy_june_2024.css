@@ -11740,7 +11740,7 @@
   }
   yt-live-chat-app {
     display:block;
-    width:100vw;
+    width:calc(100% - 0px);
     height:100vh;
     min-width:298px;
     min-height:320px;

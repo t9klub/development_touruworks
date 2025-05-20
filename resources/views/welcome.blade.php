@@ -67,7 +67,6 @@
                         </div>
                       
                     </div>
-                   
                     {{-- Item 1 --}}
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600"
                     :class="isExpanded ? '0'  : ''">
@@ -83,11 +82,30 @@
                             </div>
                         </div>
                     </div>
+                     {{-- item 4 --}}
+                    <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
+                        <button id="controlsAccordionItemFour" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
+                            <div class="inline-flex items-center space-x-2">
+                                <p> <b class="text-yellow-400">[NEWS]</b> Mugchat - Combine your chatstream together</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                            </svg>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItemTwo" role="region" aria-labelledby="controlsAccordionItemTwo" x-collapse x-transition>
+                            <div class="p-4 text-sm sm:text-base text-pretty">
+                                @lang('home.content-4')
+                                <p class="text-subtext font-light text-xs text-right mt-4">
+                                    Update Chat: 20 Mei 2025
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     {{-- item 2 --}}
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
                         <button id="controlsAccordionItemTwo" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
                             <div class="inline-flex items-center space-x-2">
-                                <p>Dummy Livechat Youtube</p>
+                                <p> <b class="text-green-400">[UPDATE]</b> Dummy Livechat Youtube</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
@@ -97,7 +115,7 @@
                             <div class="p-4 text-sm sm:text-base text-pretty">
                                 @lang('home.content-2')
                                 <p class="text-subtext font-light text-xs text-right mt-4">
-                                    Update Chat: 28 August 2024
+                                    Update Chat: 20 Mei 2025
                                 </p>
                             </div>
                         </div>

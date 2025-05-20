@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html style="font-size: 10px;font-family: Roboto, Arial, sans-serif;" dark="" darker-dark-theme="" darker-dark-theme-deprecate="" watch-color-update="">
+<html style="font-size: 10px;" dark="" darker-dark-theme="" darker-dark-theme-deprecate="" watch-color-update="">
 <head>
-    <title>Dummy Youtube Chat / Touru Works 2024 Dev.</title>
+    <title>Dummy Youtube Chat / Touru Works 2025 Dev.</title>
     <link rel="icon" href="{{asset('/src/svg/work_mouth_white.svg')}}" type="image/icon" >
     {{-- load yt css--}}
      
      <link href="{{ asset('src/css/youtube_dummy_june_2024.css')}} " rel="stylesheet"/>
+     <link rel="stylesheet" href="{{ asset('src/css/dummy.css') }}">
      <script src="{{ asset('src/js/dummy/chats.js') }}"></script>
      <script src="{{ asset('src/js/dummy/sticker.js') }}"></script>
      <script src="{{ asset('src/js/dummy/superchat.js') }}"></script>
@@ -13,320 +14,91 @@
      <script src="{{ asset('src/js/dummy/giftReceiver.js') }}"></script>
      <script src="{{ asset('src/js/dummy/member.js') }}"></script>
      <script src="{{ asset('src/js/dummy/reaction.js') }}"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style> 
-        body {
-          color: #000;
-          padding: 0 !important;
-          background: #171618;
-          margin: 0;
-          overflow-y: scroll;
-          overflow: hidden;
-        }
-      
-        .group_btn{
-          position: fixed;
-          position: absolute;
-          left: 5%;
-          top: 5%;
-          
-        z-index: 999; 
-        }
-        .group_clear{
-          position: absolute;
-          right:  5%;
-          top: 5%;
-          
-        z-index: 999; 
-        }
-      
-        .button {
-        border: none;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;  
-        opacity: 0.7;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 24px;
-      }
-      .sm{
-        transform: scale(0.5);
-      }
-       
-      .start{
-        background-color: #1a6549;  
-        animation: pulse 2s infinite;
-      }
-      .pause{
-        background-color: #aa0428;  
-        animation: pulse 2s infinite;
-      }
-      .clear{
-        background-color:  #4104aa; 
-      }
-      .supa-btn{
-        background-color:  #04aa36; 
-      }
-      .member-btn{
-        background-color:  #046aaa; 
-      }
-      .sticker-btn{
-        background-color:  #aaa504; 
-      }
-      .ga-btn{
-        background-color:  #aa0478; 
-      }
-      .button:hover{
-        opacity: 1;
-      }
-      
-        body.autoscroll {
-          overflow-y: auto;
-        }
-      
-        body.no-scroll {
-          overflow: hidden;
-        }
-      
-        body.no-y-scroll {
-          overflow-y: hidden;
-        }
-      
-        .hidden {
-          display: none;
-        }
-      
-        textarea {
-          --paper-input-container-input_-_white-space: pre-wrap;
-        }
-      
-        .grecaptcha-badge {
-          visibility: hidden;
-        }
-        @media only screen and (min-height: 200vh) {
-          .button {scale: 0.5;}
-         
-        }
-      
-        yt-live-chat-renderer {
-          height: 100vh;
-          align-content: flex-end;
-          /*background-color: var(--yt-live-chat-background-color);*/
-          background-color: transparent;
-        }
-      
-        yt-live-chat-text-message-renderer[author-is-owner] {
-          background-color: transparent;
-        }
-      
-        yt-live-chat-renderer #contents {
-          align-content: flex-end;
-          flex-direction: column-reverse !important;
-        }
-      
-        yt-live-chat-renderer #menu {
-          display: none;
-        }
-      
-        #items.yt-live-chat-item-list-renderer {
-          flex: none !important;
-        }
-      
-        div#menu {
-          /* display: none !important; */
-        }
-      
-        @keyframes pulse {
-          0% {
-              transform: scale(0.95);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-          }
-      
-          70% {
-              transform: scale(1.1);
-              box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-          }
-      
-          100% {
-              transform: scale(0.95);
-              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-          }
-      }
-      ul {
-        list-style-type: none;
-      }
-      .dropbtn {
-        border: none;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;  
-        opacity: 0.7;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 24px;
-        background-color: #303030;
-      }
-      .btn {
-        border: none;
-        color: white;
-        padding: 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;  
-        opacity: 0.7;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 24px;
-        background-color: #303030;
-        opacity: 0.7;
-        }
-        .btn:hover{
-          opacity: 1;
-        }
-        .bx {
-          font-size: 1.1rem;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+      .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
 
-        .dropdown {
-          position: absolute;
-          width: 250px;
-          /* box-shadow: var(--shadow); */
-          /* border-radius: var(--radius); */
-          background:transparent;
-        }
+  .popup.show {
+    opacity: 1;
+    visibility: visible;
+  }
 
-        .dropdown a {
-          display: flex;
-          align-items: center;
-          column-gap: var(--gap);
-          text-decoration: none;
-          color: black;
-        }
+  .popup-content {
+    background-color: #2f2e2f;
+    padding: 20px 16px;
+    border: 1px solid #ffffff21;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Doto", sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  .ap-y > p,
+  .popup-content > p{
+    font-size: 12px;
+    color: #eee;
+    text-shadow: 0 0 3px #eee;
+  }
 
-        .dropdown a:hover {
-          background-color: var(--color);
-          color: white;
-        }
-        .dropdown {
-          position: absolute;
-          width: 250px;
-          box-shadow: var(--shadow);
-          border-radius: var(--radius);
-          margin-top: 0.3rem;
-          background: transparent;
-          transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
-            
-          transform: translateY(0.5rem);
-          visibility: hidden;
-          opacity: 0;
-        }
-
-        .show {
-          transform: translateY(0rem);
-          visibility: visible;
-          opacity: 1;
-        }
-
-        .arrow {
-          transform: rotate(180deg);
-          transition: 0.2s ease;
-        }
-      </style> 
+  .hidden {
+    display: none;
+  }
+  .checkbox-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 12px;
+    }
+    .ap-y{ 
+      padding: 2px 8px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      background: #3a393a;
+      cursor: pointer;
+      opacity: 0.8;
+      border: 1px solid #ffffff21;
+    }
+    .closePopup:hover,
+    .ap-y:hover{
+      opacity: 1;
+      transition: 0.3s all;
+    }
+    .closePopup{
+      background: #3a393a;
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px; 
+      cursor: pointer;
+      font-family: "Doto", sans-serif;
+      font-size: 12px;
+      opacity: 0.8;
+      border: 1px solid #ffffff21;
+    }
+  </style>
+  @vite(['resources/js/app.js']) 
 </head>
-<body style="font-family: Roboto, Arial, sans-serif">
+<body>
             <yt-live-chat-app>
               <yt-live-chat-renderer class="style-scope yt-live-chat-app" hide-timestamps="" has-ticker="" has-input-action-panel="" style="--scrollbar-width: 15px">
                 <yt-live-chat-item-list-renderer class="style-scope yt-live-chat-renderer"> 
                   <div id="contents" class="style-scope yt-live-chat-item-list-renderer">
-              
-                    <div class="group_btn" style="transform: scale(0.8)"> 
-                      <button id="startss" class="button start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                          <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" fill="currentColor"></path>
-                      </svg>
-                      </button>
-                      <button id="pause" class="button pause" style="display: none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                          <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor"></path>
-                          <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor"></path>
-                       </svg>
-                      </button>
-                    </div>
-                    <div class="group_clear" style="transform: scale(0.8)">
-                      <button class="btn" id="btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                          <path d="M15 11l-3 3l-3 -3"></path>
-                          <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18z"></path>
-                       </svg>
-                      </button>
-                      <div class="dropdown" id="dropdown">
-                         <ul>
-                          <li>
-                            <button id="clear" class="button clear" >
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
-                                <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
-                             </svg>
-                            </button>
-                          </li>
-                        <li>
-                          <button id="supa" class="button supa-btn" >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                              <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1"></path>
-                              <path d="M12 7v10"></path>
-                           </svg>
-                          </button>   
-                        </li>
-                        <li>
-                          <button id="sticker" class="button sticker-btn " >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-smile-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.8 10.946a1 1 0 0 0 -1.414 .014a2.5 2.5 0 0 1 -3.572 0a1 1 0 0 0 -1.428 1.4a4.5 4.5 0 0 0 6.428 0a1 1 0 0 0 -.014 -1.414zm-6.19 -5.286l-.127 .007a1 1 0 0 0 .117 1.993l.127 -.007a1 1 0 0 0 -.117 -1.993zm6 0l-.127 .007a1 1 0 0 0 .117 1.993l.127 -.007a1 1 0 0 0 -.117 -1.993z" stroke-width="0" fill="currentColor"></path>
-                           </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button id="member" class="button member-btn " >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart-handshake" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
-                              <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"></path>
-                              <path d="M12.5 15.5l2 2"></path>
-                              <path d="M15 13l2 2"></path>
-                           </svg>
-                          </button>
-                        </li>
-                        <li>
-                          <button id="giveaway" class="button ga-btn " >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-gift" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                              <path d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"></path>
-                              <path d="M12 8l0 13"></path>
-                              <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7"></path>
-                              <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5"></path>
-                           </svg>
-                          </button>
-                        </li>
-                      </ul> 
-                      </div>
-                    </div>
+                   {{-- check ini --}}
                     <div id="items" class="style-scope yt-live-chat-item-list-renderer" style="transform: translateY(0px)" >
+                    
                     </div>
                   </div>
                     {{-- toast container --}}
@@ -383,145 +155,226 @@
                 <div id="action-panel" class="style-scope yt-live-chat-renderer"></div>
             </yt-live-chat-app>
 
-       
+          <control-action>
+            <div class="button-group">
+              <button class="primary-button" single id="playPause">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="#eee" d="M21 11v-1h-1V9h-2V8h-2V7h-1V6h-2V5h-2V4h-1V3H8V2H6V1H3v1H2v20h1v1h3v-1h2v-1h2v-1h1v-1h2v-1h2v-1h1v-1h2v-1h2v-1h1v-1h1v-2zm-2 2h-2v1h-2v1h-1v1h-2v1h-2v1H9v1H7v1H5v1H4V3h1v1h2v1h2v1h1v1h2v1h2v1h1v1h2v1h2z"/></svg>
+                </button>
+            </div>
+            <div class="chat-group">
+              <div class="button-group" data-expand-group>
+                <button class="primary-button" id="chatRandom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M6 20H1v-2h1v-1h1v-1h1v-2H3V8h1V7h1V6h1V5h2V4h8v1h2v1h1v1h1v1h1v6h-1v1h-1v1h-1v1h-2v1H8v1H6m0-1v-1h1v-1h8v-1h2v-1h1v-1h1V9h-1V8h-1V7h-2V6H9v1H7v1H6v1H5v4h1v3H5v1H4v1Z"/></svg>
+                  </button>
+                <button class="main-button" data-toggle>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24"><path fill="#eee" d="M20 8v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1H9v-1H8v-1H7v-1H6v-1H5V9H4V8h1V7h1v1h1v1h1v1h1v1h1v1h1v1h2v-1h1v-1h1v-1h1V9h1V8h1V7h1v1z"/></svg>
+                </button>
+                <div class="expand-buttons" data-buttons>
+                  <button style="font-family:Doto;font-size:10px;" id="chatGeneral" data-index="4">GEN</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatMember" data-index="1">MEM</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatModerator" data-index="14">MOD</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatModerator" data-index="15">BOT</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatOwner" data-index="7">OWN</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatCommentSupa" data-index="8">SUP</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatRanked" data-index="10">RNK</button>
+                  <button style="font-family:Doto;font-size:10px;" id="chatRanked" data-index="12">RN2</button>
+                </div>
+              </div> 
+            </div>
+            <div class="supa-group">
+              <div class="button-group" data-expand-group>
+                <button class="primary-button" id="supaRandom">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M7 2h8v1h2v1h1v1h1v12h-1v1h-1v1h-2v1H7v-1H5v-1H4v-1H3V5h1V4h1V3h2zm1 14v-1H6v-1H5v2h1v1h2v1h6v-1h2v-1h1v-2h-1v1h-2v1zm0-5v-1H6V9H5v3h2v1h2v1h4v-1h2v-1h2V9h-1v1h-2v1zm1-3v1h4V8h2V7h2V6h-1V5h-2V4H8v1H6v1H5v1h2v1z"/></svg> 
+                  </button>
+                <button class="main-button" data-toggle>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24"><path fill="#eee" d="M20 8v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1H9v-1H8v-1H7v-1H6v-1H5V9H4V8h1V7h1v1h1v1h1v1h1v1h1v1h1v1h2v-1h1v-1h1v-1h1V9h1V8h1V7h1v1z"/></svg>
+                </button>
+                <div class="expand-buttons" data-buttons>
+                  <button style="font-family:Doto;font-size:10px;" id="supaBlue" data-index="1">BLU</button>
+                  <button style="font-family:Doto;font-size:10px;" id="supaCyan" data-index="6">CYA</button>
+                  <button style="font-family:Doto;font-size:10px;" id="supaGreen" data-index="3">GRE</button>
+                  <button style="font-family:Doto;font-size:10px;" id="supaYellow" data-index="9">YEL</button>
+                  <button style="font-family:Doto;font-size:10px;" id="supaOrange" data-index="2">ORA</button>
+                  <button style="font-family:Doto;font-size:10px;" id="supaPink" data-index="8">PIN</button>
+                  <button style="font-family:Doto;font-size:10px;" id="supaRed" data-index="5">RED</button>
+                </div>
+              </div> 
+            </div> 
+            <div class="sticker-group">
+              <div class="button-group" data-expand-group>
+                <button class="primary-button" id="stickerRandom">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M3 7h3V6h1V5h1V4H7V3H6V2h1V1h1v1h1v1h1v1h2V3h1V2h1V1h1v1h1v1h-1v1h-1v1h1v1h1v1h3v2h-2v2h2v2h-2v2h2v2h-3v1h-1v1h-1v1H8v-1H7v-1H6v-1H3v-2h2v-2H3v-2h2V9H3zm10 11v-1h1v-1h1V8h-1V7h-1V6H9v1H8v1H7v8h1v1h1v1zm-4-5h4v2H9zm0-4h4v2H9z"/></svg>
+                  </button>
+                <button class="main-button" data-toggle>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24"><path fill="#eee" d="M20 8v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1H9v-1H8v-1H7v-1H6v-1H5V9H4V8h1V7h1v1h1v1h1v1h1v1h1v1h1v1h2v-1h1v-1h1v-1h1V9h1V8h1V7h1v1z"/></svg>
+                </button>
+                <div class="expand-buttons" data-buttons>
+                  <button style="font-family:Doto;font-size:10px;" id="stickerBlue" data-index="5">BLU</button>
+                  <button style="font-family:Doto;font-size:10px;" id="stickerCyan" data-index="0">CYA</button>
+                  <button style="font-family:Doto;font-size:10px;" id="stickerGreen" data-index="1">GRE</button>
+                  <button style="font-family:Doto;font-size:10px;" id="stickerYellow" data-index="3">YEL</button>
+                  <button style="font-family:Doto;font-size:10px;" id="stickerOrange" data-index="2">ORA</button>
+                  <button style="font-family:Doto;font-size:10px;" id="stickerPink" data-index="4">PIN</button>
+                </div>
+              </div> 
+            </div> 
+            <div class="button-group">
+                <button class="primary-button" single id="memberRandom">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M12 9h-2V8H9V6h1V5h2v1h1v2h-1m3 5H7v-2h1v-1h6v1h1M3 16h1v-1h15V3H3M2 21H1V2h1V1h18v1h1v14h-1v1H5v1H4v1H3v1H2Z"/></svg>
+                </button>
+            </div>
+            <div class="button-group">
+                <button class="primary-button" single id="giftRandom">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M19 19H3v-1H2V4h1V3h16v1h1v14h-1M18 8V5H4v3m8 4v-2h-2v2m8 5v-7h-4v3h-1v1H9v-1H8v-3H4v7Z"/></svg>
+                </button>
+            </div> 
+            <div class="button-group">
+              <button class="primary-button" single id="justReset">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M22 11v1h-1v1h-1v1h-1v1h-2v-1h-1v-1h-1v-1h-1v-1h3V9h-1V7h-1V6h-2V5H9v1H7v1H6v2H5v4h1v2h1v1h2v1h4v-1h3v2h-2v1H8v-1H6v-1H5v-1H4v-2H3V8h1V6h1V5h1V4h2V3h6v1h2v1h1v1h1v2h1v3z"/></svg>
+                </button>
+            </div>
+          </div>
+        </div>
+      </control-action>
+  <!-- Popup Chatbox -->
+        <div id="chatPopup" class="popup">
+          <div class="popup-content">
+            <p><b>Update</b>: Added Leaderboard Community 21/5/2025 </p>
+            
+            <div class="checkbox-container">
+              <label class="ap-y">
+              <input type="checkbox" id="dontShowAgain">
+                <p>dont show it again</p>
+              </label>
+
+              
+            <div style="margin-top: 0px;">
+              <button class="closePopup" id="btnClosePopup">Close</button>
+            </div>
+            </div>
+          </div>
+        </div>
+
+
     </body>
-    <script> 
-      const dropdownBtn = document.getElementById("btn");
-      const dropdownMenu = document.getElementById("dropdown");
-      const toggleArrow = document.getElementById("arrow");
-      const toggleDropdown = function () {
-        dropdownMenu.classList.toggle("show");
-        // toggleArrow.classList.toggle("arrow");
-      };
-      dropdownBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        toggleDropdown();
-      });
- 
-    (i = 0), (a = 0);
-  
-    const container = document.getElementById("items");
-
-    const btnstarts = document.getElementById('startss');
-    const btnpause = document.getElementById('pause');
-    const btnclear = document.getElementById('clear');
-    
-    const btnsupa = document.getElementById('supa');
-    const btnmember = document.getElementById('member');
-    const btnsticker = document.getElementById('sticker');
-    const btngiveaway = document.getElementById('giveaway');
-
-    const container_reaction = document.getElementById("emoji-container");
-
-    btnsupa.onclick = () =>{
-      renderSuppa(); 
-    }
-    btnmember.onclick = () =>{
-      renderMember(); 
-    }
-    btnsticker.onclick = () =>{
-      renderSticker(); 
-    }
-    btngiveaway.onclick = () =>{
-      renderGift(); 
-    }
-    var c = 0;
-    btnstarts.onclick = () => {
-      btnstarts.style.display = 'none';
-      btnpause.style.display = 'block';
+        <script> 
+        // inisialisasi boy
+         (i = 0), (a = 0);
+        var c = 0;
+      const container = document.getElementById("items");
+        
+      const playpauseButton = document.getElementById('playPause');
+      const btnclear = document.getElementById('justReset'); 
       
-      setInterval(renderReaction, 3000);
-      if (a == 0) {
-        a = a + 1;
-        // console.log(i);
-        c = setInterval(start, 800);
-        function start() { 
-          i++; 
-          if(i >= 100){
-            container.innerHTML = ""; 
-            container_reaction.innerHTML ="";
+      const container_reaction = document.getElementById("emoji-container");
+
+        const playIcon = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+          <path fill="#eee" d="M21 11v-1h-1V9h-2V8h-2V7h-1V6h-2V5h-2V4h-1V3H8V2H6V1H3v1H2v20h1v1h3v-1h2v-1h2v-1h1v-1h2v-1h2v-1h1v-1h2v-1h2v-1h1v-1h1v-2zm-2 2h-2v1h-2v1h-1v1h-2v1h-2v1H9v1H7v1H5v1H4V3h1v1h2v1h2v1h1v1h2v1h2v1h1v1h2v1h2z"/>
+        </svg>
+        `;
+
+        const pauseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M6 4h3v14H6zm7 14V4h3v14z"/></svg>
+        `;
+      let isPlaying = false; 
+      // Pasang event listener tombol
+        playpauseButton.addEventListener('click', () => {
+          togglePlayPause();
+        });
+
+        function togglePlayPause() {
+          if (isPlaying) {
+            if (a === 1) {
+              a = 0;
+              clearInterval(c);
+            }
+          } else {
+            if (a === 0) {
+              a = 1;
+              c = setInterval(start, 800);
+            }
+          }
+
+          isPlaying = !isPlaying;
+          playpauseButton.innerHTML = isPlaying ? pauseIcon : playIcon;
+        }
+
+        function start() {
+          i++;
+
+          if (i >= 100) {
+            container.innerHTML = "";
+            container_reaction.innerHTML = "";
             i = 0;
-          }else{
-            if(i%6 == 0){
-            renderSuppa(); 
-            // console.log('superchat appear');
-            renderReaction(); 
+            return;
           }
-          else if(i%7 == 0){
-            renderMember();  
-            // console.log('member appear');
-          }
-          else if(i%9 == 0 ){
-            renderGift();
-            // console.log('gift appear');
-          }
-          else if(i%10 ==0){    
-          }
-          else if(i%13 == 0 ){
-             renderSticker();  
-          }else{ 
-            renderChat();
-          } 
+
+          if (i % 6 === 0) {
+            renderFromArray(superchat);
+          } else if (i % 7 === 0) {
+            renderFromArray(member);
+          } else if (i % 9 === 0) {
+            // renderGift();
+            renderFromArray(gift);
+          } else if (i % 10 === 0) {
+            // kosong
+          } else if (i % 13 === 0) {
+            renderFromArray(sticker);
+          } else {
+            renderFromArray(chats); 
           }
         }
-      }
-    };
-
-    btnpause.onclick = () => {
-      hidePlay();
-      if (a == 1) {
-        a = a - 1;
-        clearInterval(c);
-      }
-    }
-
-    btnclear.onclick = () =>{
-      i = 0;
-      a = 0;
-      container.innerHTML = ""; 
-      if(c !== null){
-        clearInterval(c);
-      }
-      hidePlay();
-    }
-
-    function hidePlay(){
-      btnpause.style.display = 'none';
-      btnstarts.style.display = 'block';
-    }
-    
-    function renderChat() {
-   
-        const randomItem = chats[Math.floor(Math.random() * chats.length)];
-        const container = document.getElementById("items");
-        container.insertAdjacentHTML('beforeend', randomItem);
+        btnclear.onclick = () =>{
+          i = 0;
+          a = 0;
+          container.innerHTML = ""; 
+          if(c !== null){
+            clearInterval(c);
+          }
+          isPlaying = false;
+          playpauseButton.innerHTML = playIcon;
         }
-
-
-    function renderSuppa() {
-      const randomItem = superchat[Math.floor(Math.random() * superchat.length)];
-
-        const container = document.getElementById("items");
-        
-        // container.innerHTML += randomItem;
-
-        
-        container.insertAdjacentHTML('beforeend', randomItem);
-    }
-
-    function renderGift() {
-      const gifts = gift;
-      const randomItem = gift[Math.floor(Math.random() * gift.length)];
-
-        const container = document.getElementById("items");
-        // container.innerHTML += randomItem;
-        
-        container.insertAdjacentHTML('beforeend', randomItem);
-      const items = giftRec;
-      items.forEach((item, index) => {
-        setTimeout(() => {
-          // container.innerHTML += item;
           
+
+        function setupButtonHandler(prefix, renderFunction) {
+          document.querySelectorAll(`button[id^="${prefix}"]`).forEach(button => {
+            button.onclick = () => {
+              const index = button.dataset.index;
+              if (index === undefined) {
+                renderFunction(); // random/default
+              } else {
+                renderFunction(Number(index));
+              }
+            };
+          });
+        }
+             
+      setupButtonHandler("chat", (num) => renderFromArray(chats, num));
+      setupButtonHandler("supa", (num) => renderFromArray(superchat, num));
+      setupButtonHandler("sticker", (num) => renderFromArray(sticker, num));
+      setupButtonHandler("member", (num) => renderFromArray(member, num));
+      setupButtonHandler("gift", renderGift); 
+
+
+      function renderFromArray(array, number, containerId = "items") {
+        const container = document.getElementById(containerId);
+        if (!container) return;  
+
+        const randomItem = (typeof number === 'undefined')
+          ? array[Math.floor(Math.random() * array.length)]
+          : array[number];
+
+        container.insertAdjacentHTML('beforeend', randomItem);
+      }
+   
+    function renderGift() { 
+        const randomItem = gift[Math.floor(Math.random() * gift.length)]; 
+        const container = document.getElementById("items");
+        
+        container.insertAdjacentHTML('beforeend', randomItem);
+        const items = giftRec;
+        items.forEach((item, index) => {
+          setTimeout(() => { 
         container.insertAdjacentHTML('beforeend', item);
         }, (index + 1) * 100);  
       });
@@ -531,37 +384,73 @@
       const reaction = reaction_live;
       reaction.forEach((item,index) =>{
         setTimeout(() => {
-          // const newDiv= document.createElement("div");
-          // newDiv.innerHTML = item;
-          // container_reaction.appendChild(newDiv);
-          
           container_reaction.insertAdjacentHTML('beforeend', item);
         }, (index+ 1 ) *100);
       });
      
       setInterval(clearReaction,1000);
-    //   clearReaction();
-      
     }
     function clearReaction(){
         container_reaction.innerHTML ="";
     }
 
-    function renderMember() {
-      const randomItem = member[Math.floor(Math.random() * member.length)];
+ document.addEventListener('DOMContentLoaded', function () {
 
-      const container = document.getElementById("items");
-      // container.innerHTML += randomItem;
-      
-      container.insertAdjacentHTML('beforeend', randomItem);
-    }
-    function renderSticker() {
-      const randomItem = sticker[Math.floor(Math.random() * sticker.length)];
+         const popup = document.getElementById("chatPopup");
+    const closeBtn = document.getElementById("btnClosePopup");
+    const checkbox = document.getElementById("dontShowAgain");
 
-      const container = document.getElementById("items");
-      
-      container.insertAdjacentHTML('beforeend', randomItem);
-    // container.innerHTML += randomItem;
+    // Cek apakah user pernah memilih untuk menyembunyikan popup
+    const hidden = localStorage.getItem("updateversion:5/21/2025") === "true";
+
+    if (!hidden) {
+      popup.classList.add("show");
+
+      // Auto-close setelah 10 detik (10000 ms)
+      const autoCloseTimer = setTimeout(() => {
+        popup.classList.remove("show");
+      }, 60000);
+
+      closeBtn.addEventListener("click", () => {
+        if (checkbox.checked) {
+          localStorage.setItem("updateversion:5/21/2025", "true");
+        }
+        popup.classList.remove("show");
+        clearTimeout(autoCloseTimer); // Biar gak auto-close lagi setelah ditutup manual
+      });
     }
+    const groups = document.querySelectorAll('[data-expand-group]');
+
+    groups.forEach((group) => {
+      const toggleBtn = group.querySelector('[data-toggle]');
+      const buttonsContainer = group.querySelector('[data-buttons]');
+      const buttons = buttonsContainer.querySelectorAll('button');
+
+      let expanded = false;
+
+      toggleBtn.addEventListener('click', () => {
+        expanded = !expanded;
+
+        if (expanded) {
+          buttonsContainer.style.maxHeight = (buttons.length * 40 + (buttons.length - 1) * 8) + 'px';
+          buttons.forEach((btn, i) => {
+            setTimeout(() => {
+              btn.style.opacity = '1';
+              btn.style.transform = 'translateY(0)';
+            }, i * 50);
+          });
+        } else {
+          buttons.forEach((btn) => {
+            btn.style.opacity = '0';
+            btn.style.transform = 'translateY(-10px)';
+          });
+          setTimeout(() => {
+            buttonsContainer.style.maxHeight = '0';
+          }, 300);
+        }
+      });
+    });
+  });
+
       </script>
 </html>
