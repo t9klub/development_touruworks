@@ -4,8 +4,10 @@
     <title>Dummy Youtube Chat / Touru Works 2025 Dev.</title>
     <link rel="icon" href="{{asset('/src/svg/work_mouth_white.svg')}}" type="image/icon" >
     {{-- load yt css--}}
-     
      <link href="{{ asset('src/css/youtube_dummy_june_2024.css')}} " rel="stylesheet"/>
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/theme/darcula.css">
      <link rel="stylesheet" href="{{ asset('src/css/dummy.css') }}">
      <script src="{{ asset('src/js/dummy/chats.js') }}"></script>
      <script src="{{ asset('src/js/dummy/sticker.js') }}"></script>
@@ -35,14 +37,18 @@
     visibility: visible;
   }
 
+  .modal-content,
   .popup-content {
     background-color: #2f2e2f;
     padding: 20px 16px;
     border: 1px solid #ffffff21;
-    border-radius: 8px;
-    text-align: center;
+    border-radius: 4px;
     font-family: "Doto", sans-serif;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  .popup-content {
+
+    text-align: center;
   }
   .ap-y > p,
   .popup-content > p{
@@ -72,11 +78,13 @@
       opacity: 0.8;
       border: 1px solid #ffffff21;
     }
+    .twPrButton:hover,
     .closePopup:hover,
     .ap-y:hover{
       opacity: 1;
       transition: 0.3s all;
     }
+    .twPrButton,
     .closePopup{
       background: #3a393a;
       color: #ffffff;
@@ -87,7 +95,76 @@
       font-size: 12px;
       opacity: 0.8;
       border: 1px solid #ffffff21;
+    }   /* Modal styles */
+.policy{
+    background: #3a393a;
+      color: #ffffff;
+      border: none;
+      padding: 5px 10px; 
+      cursor: pointer;
+      font-family: "Doto", sans-serif;
+      font-size: 12px;
+      opacity: 0.8;
+      border: 1px solid #ffffff21;
+      margin-bottom: 6px;
+      margin-top: 6px
+}
+       #preview {
+      padding: 20px;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 8px;
     }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-footer{
+      display: flex;
+      justify-content: space-between;
+    }
+    .modal-content { 
+      margin: 10% auto;
+      padding: 10px 20px 20px ;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 0 10px #000;
+
+       /* Tambahan untuk membatasi tinggi */
+        max-height: 600px;
+        overflow-y: auto;
+    } 
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .modal-close {
+      cursor: pointer;
+      font-size: 20px;
+    }
+.twPrButton#closeModalBtn2{
+ background-color: #a8a8a8;
+ cursor: pointer;
+ color: #000000
+}
+    .CodeMirror {
+      border: 1px solid #555;
+  max-height: 350px; 
+    }
+     
   </style>
   @vite(['resources/js/app.js']) 
 </head>
@@ -156,11 +233,16 @@
             </yt-live-chat-app>
 
           <control-action>
-            <div class="button-group">
+            <div class="button-group" data-expand-group="">
               <button class="primary-button" single id="playPause">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="#eee" d="M21 11v-1h-1V9h-2V8h-2V7h-1V6h-2V5h-2V4h-1V3H8V2H6V1H3v1H2v20h1v1h3v-1h2v-1h2v-1h1v-1h2v-1h2v-1h1v-1h2v-1h2v-1h1v-1h1v-2zm-2 2h-2v1h-2v1h-1v1h-2v1h-2v1H9v1H7v1H5v1H4V3h1v1h2v1h2v1h1v1h2v1h2v1h1v1h2v1h2z"/></svg>
+              </button>
+                <button class="main-button" data-toggle>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24"><path fill="#eee" d="M20 8v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-2v-1h-1v-1H9v-1H8v-1H7v-1H6v-1H5V9H4V8h1V7h1v1h1v1h1v1h1v1h1v1h1v1h2v-1h1v-1h1v-1h1V9h1V8h1V7h1v1z"/></svg>
                 </button>
-            </div>
+                <div class="expand-buttons" data-buttons>
+                  {{-- Advanced Action Start --}}
+
             <div class="chat-group">
               <div class="button-group" data-expand-group>
                 <button class="primary-button" id="chatRandom">
@@ -228,14 +310,50 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M19 19H3v-1H2V4h1V3h16v1h1v14h-1M18 8V5H4v3m8 4v-2h-2v2m8 5v-7h-4v3h-1v1H9v-1H8v-3H4v7Z"/></svg>
                 </button>
             </div> 
+                  {{-- Advanced Action Ends --}}
+                </div>
+            </div>
             <div class="button-group">
               <button class="primary-button" single id="justReset">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 22 22"><path fill="#eee" d="M22 11v1h-1v1h-1v1h-1v1h-2v-1h-1v-1h-1v-1h-1v-1h3V9h-1V7h-1V6h-2V5H9v1H7v1H6v2H5v4h1v2h1v1h2v1h4v-1h3v2h-2v1H8v-1H6v-1H5v-1H4v-2H3V8h1V6h1V5h1V4h2V3h6v1h2v1h1v1h1v2h1v3z"/></svg>
                 </button>
             </div>
+            <div class="button-group">
+              <button class="primary-button" single id="openModalBtn">
+             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="#eee" d="M15 4h1v2h-1v3h-1v3h-1v2h-1v3h-1v3h-1v1H9v-1H8v-2h1v-3h1v-3h1v-2h1V7h1V4h1V3h1zm8 7v2h-1v1h-1v1h-1v1h-1v1h-2v-2h1v-1h1v-1h1v-2h-1v-1h-1V9h-1V7h2v1h1v1h1v1h1v1zM7 7v2H6v1H5v1H4v2h1v1h1v1h1v2H5v-1H4v-1H3v-1H2v-1H1v-2h1v-1h1V9h1V8h1V7z"/></svg>
+                </button>
+            </div>
           </div>
         </div>
       </control-action>
+      {{-- Code Editor Start --}}
+        <div id="cssModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Paste code your below: <br></h3><br>
+          
+          <span class="modal-close" id="closeModalBtn">&times;</span>
+        </div>
+      <textarea id="cssEditor">/* Drop your code css here */</textarea>
+      <div class="policy">
+        Touruworks does not store or share the YouTube chat code you submit.
+          The access and refresh are stored locally within the application's settings file, located in the same directory as the application. This information is used solely to access YouTube Live chat dummy features and is never transmitted or shared with any external server.
+        <br><br>
+          *this feature save your code in local storage, so in case you open again the code will be there
+      </div>
+      <div class="modal-footer">
+        <div>
+          <button id="applyCssBtn" class="twPrButton">Apply & Save</button>
+          <button id="resetCssBtn"  class="twPrButton">Reset</button>
+        </div>
+        <div>
+          <button id="closeModalBtn2" class="twPrButton">Cancel</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      {{-- Code Editor Ends --}}
   <!-- Popup Chatbox -->
         <div id="chatPopup" class="popup">
           <div class="popup-content">
@@ -446,11 +564,78 @@
           });
           setTimeout(() => {
             buttonsContainer.style.maxHeight = '0';
-          }, 300);
+          }, 200);
         }
       });
     });
   });
 
       </script>
+      
+  <!-- CodeMirror Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/css/css.js"></script>
+
+      <script>
+    // Modal logic
+    const modal = document.getElementById('cssModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const closeBtn2 = document.getElementById('closeModalBtn2');
+
+    openBtn.onclick = () => {
+      modal.style.display = 'block';
+      editor.refresh(); // Refresh CodeMirror size after modal appears
+    };
+    closeBtn.onclick = () => {
+      modal.style.display = 'none';
+    };
+    closeBtn2.onclick = () => {
+      modal.style.display = 'none';
+    };
+    // window.onclick = (e) => {
+    //   if (e.target == modal) modal.style.display = 'none';
+    // };
+
+    // CodeMirror setup
+      const editor = CodeMirror.fromTextArea(document.getElementById("cssEditor"), {
+      mode: "css",
+      lineNumbers: true,
+      lineWrapping: true,
+      theme: "darcula"
+    });
+
+    // Terapkan CSS
+   // Fungsi untuk menerapkan CSS ke halaman
+function applyCSS(cssCode) {
+  let customStyle = document.getElementById('custom-style');
+  if (!customStyle) {
+    customStyle = document.createElement('style');
+    customStyle.id = 'custom-style';
+    document.head.appendChild(customStyle);
+  }
+  customStyle.textContent = cssCode;
+}
+
+// Saat tombol "Terapkan CSS" ditekan
+document.getElementById('applyCssBtn').addEventListener('click', () => {
+  const cssCode = editor.getValue();
+  applyCSS(cssCode);
+  localStorage.setItem('userCustomCSS', cssCode); // Simpan ke localStorage
+});
+document.getElementById('resetCssBtn').addEventListener('click', () => {
+  editor.setValue('/* Drop your code css here */');
+  applyCSS('');
+  localStorage.removeItem('userCustomCSS');
+});
+
+// Saat halaman dimuat, cek apakah ada CSS tersimpan
+window.addEventListener('DOMContentLoaded', () => {
+  const savedCSS = localStorage.getItem('userCustomCSS');
+  if (savedCSS) {
+    editor.setValue(savedCSS);
+    applyCSS(savedCSS);
+  }
+});
+  </script>
 </html>

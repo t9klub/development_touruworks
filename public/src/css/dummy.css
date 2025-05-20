@@ -71,7 +71,7 @@
         top: 2%;
         display: flex;
         flex-direction: column;
-        z-index: 1000;
+        z-index: 30;
         opacity: 0.8;
       }
  
@@ -88,13 +88,13 @@
   flex-direction: column;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.2s ease;
 }
  
 .expand-buttons button {
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   cursor: pointer;
 }
 .expand-buttons button,
@@ -108,9 +108,15 @@
 }
 .expand-buttons button {
   border-radius: 0; 
-  padding: 8px 5px;
 }
+.expand-buttons .expand-buttons button {
+  
+  padding: 8px 5px;
+ }
  
+.expand-buttons .main-button {
+padding: 2px 11px;
+}
 .expand-buttons button:first-child {
   border-radius: 4px 4px 0 0;
   margin-top: 1px;
@@ -136,7 +142,7 @@
   z-index: 2;
 }
 
-.main-button > svg{
+.main-button  svg{
   opacity: 0.7;
 }
 .expand-buttons button:hover,
@@ -149,10 +155,13 @@
 .primary-button#justReset{
   background: #0436aa;
 }
-.primary-button > svg{
+.primary-button#openModalBtn{
+  background: #16890c;
+}
+.primary-button svg{
   opacity: 0.8;
 }
-.primary-button > svg:hover{
+.primary-button  svg:hover{
   opacity: 1;
   transition: 300ms;
 } 
