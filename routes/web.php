@@ -20,7 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/load/{url}',[LoadLivechatController::class,'index']); 
 Route::get('/dummy', function(){
     return view('utils.dummy-chat');
-})->name('utils.dummy'); 
+})->name('utils.dummy');  
+Route::get('/basic-editor', function(){
+    return view('utils.basic-editor');
+})->name('utils.basic-editor'); 
 
 Route::get('lang/{lang}', function($lang){
     app()->setLocale($lang);

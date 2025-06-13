@@ -26,6 +26,26 @@
                 background-position: 0 0,10px 10px;
                 /* overflow: hidden; */
             }
+            
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      margin-bottom: 10px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
+
         </style> 
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -86,6 +106,38 @@
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
                         <button id="controlsAccordionItemFour" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
                             <div class="inline-flex items-center space-x-2">
+                                <p class="text-white"> <b class="text-green-400">[FREE]</b> Basic Editor - Remove your badge rank!!</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+                            </svg>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItemTwo" role="region" aria-labelledby="controlsAccordionItemTwo" x-collapse x-transition>
+                            <div class="p-4 text-sm sm:text-base text-pretty">
+                                {{-- @lang('home.content-4')  --}}
+                                    <h2 class="mb-4"><span class="font-bold"> This CSS editor</span> was originally made for commission clients — but I’ve decided to release it publicly for free to help you tweak and clean up your chat appearance with just a few simple changes.</h2>
+                                      
+                                        <ul class="feature-list ml-4 ">
+                                        <li>Fade effect for a smoother chat flow</li>
+                                        <li>Remove badge for normal comments</li>
+                                        <li>Remove badge for Super Chat comments</li>
+                                        <li>Remove reaction icons</li>
+                                        <li>Wider chat layout for better readability</li>
+                                        </ul>
+                                          <p>
+                                            💡 We do not store or collect any data that you input into the editor. Everything runs locally in your browser, and your code stays private.
+                                        </p>
+                                        <p class="mt-4">
+                                            Use the editor instantly via this link: <a href="/basic-editor" class="underline underline-offset-2 text-black dark:text-white hover:text-yellow-400 transition-all duration-300 font-bold"> basic editor application</a>
+                                            Download the portable HTML version via Google Drive here:  <a href="#" class="underline underline-offset-2 text-black dark:text-white hover:text-yellow-400 transition-all duration-300 font-bold"> soon</a>
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                     {{-- item 4 --}}
+                    <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
+                        <button id="controlsAccordionItemFour" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
+                            <div class="inline-flex items-center space-x-2">
                                 <p> <b class="text-yellow-400">[NEWS]</b> Mugchat - Combine your chatstream together</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
@@ -102,7 +154,7 @@
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
                         <button id="controlsAccordionItemTwo" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
                             <div class="inline-flex items-center space-x-2">
-                                <p> <b class="text-green-400">[UPDATE]</b> Dummy Livechat Youtube</p>
+                                <p> <b class="text-white">[UPDATE]</b> Dummy Livechat Youtube</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
