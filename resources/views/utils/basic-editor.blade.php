@@ -122,17 +122,18 @@ button:hover{
   opacity: 1;
   transition: all 0.3s ease;
 }
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  /* color: #4a90e2; */
-}
+
 .group-button{
   display: flex;
   flex-direction: row;
   gap: 4px;
   justify-content: flex-end;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  /* color: #4a90e2; */
 }
 .tooltip-box {
   position: absolute;
@@ -148,7 +149,8 @@ button:hover{
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
-}yt-reaction-control-panel-overlay {
+}
+yt-reaction-control-panel-overlay {
   position: absolute;
   right: 8px;
   bottom: 8px;
@@ -895,6 +897,10 @@ document.getElementById('resetCssBtn').addEventListener('click', () => {
         #before-content-buttons{
         display: none !important;
         }
+        #leaderboard-badge{
+        display: none !important;
+        }
+
       `;
     }
     

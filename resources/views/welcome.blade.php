@@ -45,7 +45,15 @@
       position: absolute;
       left: 0;
     }
+        .blink_me {
+       animation: blinker 1s step-start infinite;
+        }
 
+@keyframes blinker {
+  50% {
+    color: #ffbc00;
+  }
+}
         </style> 
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
@@ -106,7 +114,7 @@
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
                         <button id="controlsAccordionItemFour" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
                             <div class="inline-flex items-center space-x-2">
-                                <p class="text-white"> <b class="text-green-400">[FREE]</b> Basic Editor - Remove your badge rank!!</p>
+                                <p class="text-white"> <b class="text-green-400 blink_me">[++FREE++]</b> Basic Editor - Remove your badge rank!!</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
@@ -116,7 +124,6 @@
                             <div class="p-4 text-sm sm:text-base text-pretty">
                                 {{-- @lang('home.content-4')  --}}
                                     <h2 class="mb-4"><span class="font-bold"> This CSS editor</span> was originally made for commission clients — but I’ve decided to release it publicly for free to help you tweak and clean up your chat appearance with just a few simple changes.</h2>
-                                      
                                         <ul class="feature-list ml-4 ">
                                         <li>Fade effect for a smoother chat flow</li>
                                         <li>Remove badge for normal comments</li>
@@ -127,10 +134,16 @@
                                           <p>
                                             💡 We do not store or collect any data that you input into the editor. Everything runs locally in your browser, and your code stays private.
                                         </p>
-                                        <p class="mt-4">
-                                            Use the editor instantly via this link: <a href="/basic-editor" class="underline underline-offset-2 text-black dark:text-white hover:text-yellow-400 transition-all duration-300 font-bold"> basic editor application</a>
-                                            Download the portable HTML version via Google Drive here:  <a href="#" class="underline underline-offset-2 text-black dark:text-white hover:text-yellow-400 transition-all duration-300 font-bold"> soon</a>
-                                        </p>
+                                        <div class="flex justify-end gap-3 mt-3">
+                                            <a href="/basic-editor" type="button" class="transition-all text-gray-900 hover:border-primary bg-white/10 hover:bg-primary border border-white/10  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-800 dark:border-white/10 dark:text-white dark:hover:bg-gray-700 me-2 mb-2" target="_blank">
+                                               <svg class="w-4 h-4 me-2 -ms-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><defs><path id="eosIconsApplicationOutlined0" fill="currentColor" d="m9 18l.7-.7l.7-.7l-1.3-1.3L7.8 14l1.3-1.3l1.3-1.3l-.7-.7L9 10l-2 2l-2 2l2 2zm4.6-1.4l.7.7l.7.7l2-2l2-2l-2-2l-2-2l-.7.7l-.7.7l1.3 1.3l1.3 1.3l-1.3 1.3z"/></defs><path fill="currentColor" d="M1 3v2h22V3a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2m3.007 1.008a1 1 0 1 1 .999-1a1 1 0 0 1-1 1m2.997-.001a1 1 0 1 1 1-1a1 1 0 0 1-1 1M1 6v14a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6Zm20 14H3V8h18Z"/><use href="#eosIconsApplicationOutlined0"/><use href="#eosIconsApplicationOutlined0"/></svg>
+                                                        Editor Application
+                                                </a>
+                                                <a href="#" class="text-gray-900 bg-white/10 hover:bg-gray-100 border border-white/10  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-white/10 dark:text-white dark:hover:bg-gray-700 me-2 mb-2" disable>
+                                                <svg  class="w-4 h-4 me-2 -ms-1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M12.01 1.485c-2.082 0-3.754.02-3.743.047c.01.02 1.708 3.001 3.774 6.62l3.76 6.574h3.76c2.081 0 3.753-.02 3.742-.047c-.005-.02-1.708-3.001-3.775-6.62l-3.76-6.574zm-4.76 1.73a789.828 789.861 0 0 0-3.63 6.319L0 15.868l1.89 3.298l1.885 3.297l3.62-6.335l3.618-6.33l-1.88-3.287C8.1 4.704 7.255 3.22 7.25 3.214zm2.259 12.653l-.203.348c-.114.198-.96 1.672-1.88 3.287a423.93 423.948 0 0 1-1.698 2.97c-.01.026 3.24.042 7.222.042h7.244l1.796-3.157c.992-1.734 1.85-3.23 1.906-3.323l.104-.167h-7.249z"/></svg>
+                                                Offline Version(soon)
+                                                </a>
+                                        </div>
                             </div>
                         </div>
                     </div>
@@ -138,7 +151,7 @@
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
                         <button id="controlsAccordionItemFour" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
                             <div class="inline-flex items-center space-x-2">
-                                <p> <b class="text-yellow-400">[NEWS]</b> Mugchat - Combine your chatstream together</p>
+                                <p> <b class="text-yellow-400">[++NEWS++]</b> Mugchat - Combine your chatstream together</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
@@ -154,7 +167,7 @@
                     <div x-data="{ isExpanded: false }" class="divide-y  divide-white/10 dark:divide-white/10  rounded-lg bg-card/60 shadow-md shadow-white/5 group transition-all duration-600 mt-4">
                         <button id="controlsAccordionItemTwo" type="button" class="flex w-full items-center justify-between gap-4 bg-neutral-50 p-4 text-left underline-offset-2 hover:bg-neutral-50/75 focus-visible:bg-neutral-50/75 focus-visible:underline focus-visible:outline-none dark:bg-card dark:hover:bg-card/75 dark:focus-visible:bg-neutral-900/75 transition-all duration-500 group-hover:text-primary bg-[url('{{asset('/src/png/dot_pattern.png')}}')] bg-right-top bg-no-repeat bg-blend-exclusion" aria-controls="accordionItemOne" @click="isExpanded = ! isExpanded" :class="isExpanded ? 'text-onSurfaceStrong dark:text-onSurfaceDarkStrong font-bold rounded-t-lg text-yellow-500'  : 'text-onSurface dark:text-onSurfaceDark font-medium rounded-lg'" :aria-expanded="isExpanded ? 'true' : 'false'">
                             <div class="inline-flex items-center space-x-2">
-                                <p> <b class="text-white">[UPDATE]</b> Dummy Livechat Youtube</p>
+                                <p> <b class="text-white">[++UPDATE++]</b> Dummy Livechat Youtube</p>
                             </div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="size-5 shrink-0 transition" aria-hidden="true" :class="isExpanded  ?  'rotate-180'  :  ''">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
